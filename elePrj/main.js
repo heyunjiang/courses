@@ -1,6 +1,4 @@
-/**
- * Created by TR on 2016/3/16.
- */
+
 var electron = require('electron');
 var app = electron.app;
 var BrowserWindow = require('browser-window');
@@ -18,23 +16,10 @@ var template = [
         label: '关于',
         submenu: [
             {
-                label: '版本',
-                click: function() {
-                    require("./about").show();
-                }
+                label: '版本'
             },
             {
-                label: '项目',
-                accelerator: (function() {
-                    if (process.platform == 'darwin')
-                        return 'Ctrl+Command+F';
-                    else
-                        return 'F11';
-                })(),
-                click: function(item, focusedWindow) {
-                    if (focusedWindow)
-                        focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
-                }
+                label: '项目'
             }
         ]
     }
@@ -49,13 +34,13 @@ app.on('window-all-closed', function () {
 var buildMainWindow = function(){
     var electronScreen = electron.screen;
     var size = electronScreen.getPrimaryDisplay().workAreaSize;
-    BrowserWindow.mainWindow = mainWindow = new BrowserWindow({ 
-        width: 900, 
-        height: 700, 
+    BrowserWindow.mainWindow = mainWindow = new BrowserWindow({
+        width: 900,
+        height: 700,
         useContentSize:true,
-        resizable:false,
-        maximizable:false,
-        fullscreenable:false,
+        resizable:true,
+        maximizable:true,
+        fullscreenable:true,
         titleBarStyle:"hidden",
         backgroundColor: "rgba(0,0,0,0.5)" });
     webContents = mainWindow.webContents;
@@ -71,7 +56,7 @@ var buildMenu = function(){
 }
 
 var buildAppIcon = function(){
-    appIcon = new Tray(nativeImage.createFromPath(__dirname+'/img/logo.ico'));
+    appIcon = new Tray(nativeImage.createFromPath(__dirname+'/logo.ico'));
     appIcon.setToolTip('This is my application.');
     var contextMenu = Menu.buildFromTemplate([
         { label: '退出', click: function(){
