@@ -1,0 +1,8 @@
+{
+  "name": "webpack-electron",
+  "version": "0.0.2",
+  "description": "helloWorld",
+  "author": "heyunjiang",
+  "main": "main.js",
+  "productName": "lalal"
+}

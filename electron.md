@@ -14,12 +14,24 @@
 
 
 ```sh
-# Install the `electron` command globally in your $PATH
+# 全局安装 `electron` （推荐）
 npm install electron-prebuilt -g
 
-# Install as a development dependency
+# 作为开发依赖局部安装
 npm install electron-prebuilt --save-dev
 ```
 
+##构建项目
 
+1、新建项目文件夹：elePrj ;
+
+2、创建 `package.json` 加载文件 ;
+
+3、创建项目入口文件 `main.js` ;
+
+4、创建 `index` 页面 ;
+
+项目目录结构如图
+
+![Electron Logo](http://electron.atom.io/images/electron-logo.svg)
 
