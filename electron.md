@@ -21,6 +21,10 @@ npm install electron-prebuilt -g
 npm install electron-prebuilt --save-dev
 ```
 
+>全局安装成功测试：cmd中输入electron -v
+
+![categoryStructure](./mdImg/ele-v.jpg)
+
 ##构建项目
 
 1、新建项目文件夹：elePrj ;
@@ -33,5 +37,5 @@ npm install electron-prebuilt --save-dev
 
 项目目录结构如图
 
-![Electron Logo](http://electron.atom.io/images/electron-logo.svg)
+![categoryStructure](./mdImg/catStr.png)
 
